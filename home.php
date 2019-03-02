@@ -36,7 +36,7 @@ wp_head(); ?>
 </table>
 <script>
     jQuery(document).ready(function() {
-        jQuery('#song-list').DataTable();
+        jQuery('#song-list').DataTable( { paging: false } );
     } );
 </script>
 <?php
