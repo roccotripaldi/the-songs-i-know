@@ -21,6 +21,10 @@ function songs_enqueue_data_tables() {
 			'songs_data_table_styles',
 			'https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css'
 		);
+		wp_enqueue_style(
+			'songs',
+			get_stylesheet_uri()
+		);
 	}
 }
 

@@ -8,30 +8,30 @@
  */
 
 wp_head(); ?>
-
+<body id="home">
 <table id="song-list">
     <thead>
     <tr>
-        <td>Title</td>
-        <td>Artist</td>
-        <td>Tags</td>
+        <td class="song-title">Title</td>
+        <td class="song-artist">Artist</td>
+        <td class="song-tags">Tags</td>
     </tr>
     </thead>
     <tbody>
-    <?php while( have_posts() ): the_post() ?>
-	    <?php $song = parse_blocks( get_the_content() )[0]['attrs']; ?>
-	    <?php $posttags = get_the_tags(); ?>
+	<?php while( have_posts() ): the_post() ?>
+		<?php $song = parse_blocks( get_the_content() )[0]['attrs']; ?>
+		<?php $posttags = get_the_tags(); ?>
         <tr>
-            <td><?php echo $song['title'] ?></td>
-            <td><?php echo $song['artist']; ?></td>
-            <td>
-			    <?php if ( is_array( $posttags ) ) : ?>
-                    <?php $tags = implode(', ', wp_list_pluck( $posttags,'name') ); ?>
+            <td class="song-title"><?php echo $song['title'] ?></td>
+            <td class="song-artist"><?php echo $song['artist']; ?></td>
+            <td class="song-tags">
+				<?php if ( is_array( $posttags ) ) : ?>
+					<?php $tags = implode(', ', wp_list_pluck( $posttags,'name') ); ?>
                     <span><?php echo $tags; ?></span>
-			    <?php endif; ?>
+				<?php endif; ?>
             </td>
         </tr>
-    <?php endwhile; ?>
+	<?php endwhile; ?>
     </tbody>
 </table>
 <script>
@@ -39,5 +39,6 @@ wp_head(); ?>
         jQuery('#song-list').DataTable( { paging: false } );
     } );
 </script>
+</body>
 <?php
 wp_footer();
