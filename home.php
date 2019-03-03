@@ -34,6 +34,9 @@ wp_head(); ?>
 	<?php endwhile; ?>
     </tbody>
 </table>
+<div id="song-request">
+    <a role="button" href="/learn">What Song Should I Learn?</a>
+</div>
 <script>
     jQuery(document).ready(function() {
         jQuery('#song-list').DataTable( { paging: false } );

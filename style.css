@@ -436,3 +436,23 @@ body {
 #home tbody td {
     background-color: #222;
 }
+#song-request {
+	position: fixed;
+	background: #000;
+	padding: 15px 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+}
+
+#song-request a, #song-request a:visited {
+	background: darkorange;
+	padding: 10px 30px;
+	color: #000;
+	display: inline-block;
+	text-decoration: none;
+	border-radius: 10px;
+	text-transform: uppercase;
+	font-size: smaller;
+}
