@@ -479,3 +479,33 @@ body {
 	color: darkorange;
 	text-decoration: none;
 }
+
+/*--------------------------------------------------------------
+# Request Form
+--------------------------------------------------------------*/
+#request {
+	width: 90%;
+	max-width: 800px;
+	margin: 60px auto;
+	padding: 0 5%;
+}
+
+#request h2 {
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+#request label {
+	text-transform: uppercase;
+	margin-bottom: 8px;
+}
+
+#request input, #request textarea {
+	background: #999;
+	outline: none;
+	border: none;
+	border-radius: 10px;
+	padding: 5px 10px;
+	margin-bottom: 16px;
+}

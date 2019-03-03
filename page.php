@@ -7,10 +7,13 @@
  * @package songs
  */
 
-wp_head(); ?>
-<?php while( have_posts() ): the_post(); ?>
-    <?php the_title(); ?>
-	<?php the_content(); ?>
-<?php endwhile; ?>
+get_header(); ?>
+<?php get_template_part( 'back-button-bar' ); ?>
+<div id="request">
+	<?php while( have_posts() ): the_post(); ?>
+		<h2><?php the_title(); ?></h2>
+		<?php the_content(); ?>
+	<?php endwhile; ?>
+</div>
 <?php
-wp_footer();
+get_footer();
