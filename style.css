@@ -459,3 +459,23 @@ body {
 	text-transform: uppercase;
 	font-size: smaller;
 }
+
+#home td a, #home td a:visited {
+	color: darkorange;
+	text-decoration: none;
+}
+
+/*--------------------------------------------------------------
+# Single Song
+--------------------------------------------------------------*/
+#single-song {
+	color: saddlebrown;
+	width: 100%;
+	max-width: 800px;
+	margin: 60px auto;
+}
+
+#song-list_filter a, #song-list_filter a:visited {
+	color: darkorange;
+	text-decoration: none;
+}

@@ -22,7 +22,9 @@ get_header(); ?>
 		<?php $song = parse_blocks( get_the_content() )[0]['attrs']; ?>
 		<?php $posttags = get_the_tags(); ?>
         <tr>
-            <td class="song-title"><?php echo $song['title'] ?></td>
+            <td class="song-title">
+                <a href="<?php the_permalink(); ?>"><?php echo $song['title'] ?></a>
+            </td>
             <td class="song-artist"><?php echo $song['artist']; ?></td>
             <td class="song-tags">
 				<?php if ( is_array( $posttags ) ) : ?>

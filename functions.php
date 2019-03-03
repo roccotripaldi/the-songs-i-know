@@ -10,7 +10,7 @@ function songs_set_home_query( $query ) {
 
 add_action( 'pre_get_posts', 'songs_set_home_query' );
 
-function songs_enqueue_data_tables() {
+function songs_enqueue_assets() {
 	if ( is_home() ) {
 		wp_enqueue_script(
 			'songs_data_table_scripts',
@@ -21,12 +21,12 @@ function songs_enqueue_data_tables() {
 			'songs_data_table_styles',
 			'https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css'
 		);
-		wp_enqueue_style(
-			'songs',
-			get_stylesheet_uri()
-		);
 	}
+	wp_enqueue_style(
+		'songs',
+		get_stylesheet_uri()
+	);
 }
 
-add_action( 'wp_enqueue_scripts', 'songs_enqueue_data_tables' );
+add_action( 'wp_enqueue_scripts', 'songs_enqueue_assets' );
 
