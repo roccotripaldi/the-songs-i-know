@@ -501,11 +501,24 @@ body {
 	margin-bottom: 8px;
 }
 
-#request input, #request textarea {
+#request input {
 	background: #999;
 	outline: none;
 	border: none;
 	border-radius: 10px;
-	padding: 5px 10px;
+	padding: 10px 5%;
 	margin-bottom: 16px;
+	width: 90%;
 }
+
+.request-success {
+	font-size: x-large;
+	text-align: center;
+}
+
+.request-success a, .request-success a:visited {
+	color: darkorange;
+	text-decoration: none;
+}
+
+

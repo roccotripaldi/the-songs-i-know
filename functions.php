@@ -30,3 +30,12 @@ function songs_enqueue_assets() {
 
 add_action( 'wp_enqueue_scripts', 'songs_enqueue_assets' );
 
+function songs_request_success_message() {
+	return (
+		"<p class='request-success'><b>Transmission Received!</b><br /><a href='/learn'>Request an other song?</a></p>"
+	);
+}
+
+
+add_filter( 'grunion_contact_form_success_message', 'songs_request_success_message' );
+
