@@ -501,7 +501,7 @@ body {
 	margin-bottom: 8px;
 }
 
-#request input {
+#request input[type="text"] {
 	background: #999;
 	outline: none;
 	border: none;
