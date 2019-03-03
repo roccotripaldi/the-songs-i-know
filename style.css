@@ -420,11 +420,12 @@ body {
     margin: 60px auto 10px auto;
 }
 #song-list_info {
-    margin: 0 auto 60px auto;
+    margin: 0 auto 80px auto;
     text-align: right;
     float: none;
     color: #999;
     font-size: small;
+	padding-right: 20px;
 }
 #home td {
     border-bottom: 1px solid #555;

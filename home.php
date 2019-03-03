@@ -7,8 +7,8 @@
  * @package songs
  */
 
-wp_head(); ?>
-<body id="home">
+get_header(); ?>
+<div id="home">
 <table id="song-list">
     <thead>
     <tr>
@@ -42,6 +42,6 @@ wp_head(); ?>
         jQuery('#song-list').DataTable( { paging: false } );
     } );
 </script>
-</body>
+</div>
 <?php
-wp_footer();
+get_footer();
